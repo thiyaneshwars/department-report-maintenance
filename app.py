@@ -24,7 +24,6 @@ if st.button("Submit Report"):
     else:
         st.warning("Please fill all fields!")
 
-# Fetch and display reports
-st.subheader("📋 Submitted Reports")
+
 
 
