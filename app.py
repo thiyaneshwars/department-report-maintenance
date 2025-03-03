@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Flask API URL (Change if deployed)
-API_URL = "  http://localhost:5000"
+API_URL = "https://87ee-36-255-17-205.ngrok-free.app"
 
 # Streamlit UI
 st.title("📑 Department Report Maintenance")
