@@ -5,7 +5,7 @@ import requests
 API_URL = "https://1c41-36-255-17-205.ngrok-free.app"
 
 # Streamlit UI
-st.title("📑 Department Report Maintenance")
+st.title("📑 IITM Daily Report Maintenance")
 
 # Input fields for report submission
 st.subheader("Submit a New Report")
