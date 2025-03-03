@@ -14,7 +14,7 @@ member = st.text_input("Member Name")
 task = st.text_area("Task Description")
 
 if st.button("Submit Report"):
-    if department and member and task:
+    if domain and member and task:
         response = requests.post(f"{API_URL}/add_report", json={
             "Domain": domain,
             "member": member,
