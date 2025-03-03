@@ -9,14 +9,14 @@ st.title("📑 Department Report Maintenance")
 
 # Input fields for report submission
 st.subheader("Submit a New Report")
-department = st.text_input("Domain")
+domain = st.text_input("Domain")
 member = st.text_input("Member Name")
 task = st.text_area("Task Description")
 
 if st.button("Submit Report"):
     if department and member and task:
         response = requests.post(f"{API_URL}/add_report", json={
-            "Domain": department,
+            "Domain": domain,
             "member": member,
             "task": task
         })
