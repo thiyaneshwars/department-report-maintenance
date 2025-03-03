@@ -27,8 +27,4 @@ if st.button("Submit Report"):
 # Fetch and display reports
 st.subheader("📋 Submitted Reports")
 
-if st.button("Load Reports"):
-    reports = requests.get(f"{API_URL}/get_reports").json()
-    for r in reports:
-        st.write(f"**Department:** {r['department']} | **Member:** {r['member']} | **Task:** {r['task']}")
 
