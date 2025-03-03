@@ -16,7 +16,7 @@ task = st.text_area("Task Description")
 if st.button("Submit Report"):
     if domain and member and task:
         response = requests.post(f"{API_URL}/add_report", json={
-            "Domain": domain,
+            "domain": domain,
             "member": member,
             "task": task
         })
