@@ -6,11 +6,11 @@ import requests
 API_URL = "https://04cc-103-115-236-19.ngrok-free.app"
 
 # Streamlit UI
-st.title("📑 Department Report Maintenance")
+st.title("📑IITM Project Report Maintenance")
 
 # Input fields for report submission
 st.subheader("Submit a New Report")
-department = st.text_input("Department")
+department = st.text_input("Project Name")
 member = st.text_input("Member Name")
 task = st.text_area("Task Description")
 
@@ -25,13 +25,7 @@ if st.button("Submit Report"):
     else:
         st.warning("Please fill all fields!")
 
-# Fetch and display reports
-st.subheader("📋 Submitted Reports")
 
-if st.button("Load Reports"):
-    reports = requests.get(f"{API_URL}/get_reports").json()
-    for r in reports:
-        st.write(f"**Department:** {r['department']} | **Member:** {r['member']} | **Task:** {r['task']}")
 
 
 
