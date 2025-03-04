@@ -9,9 +9,9 @@ st.title("📑 IITM Daily Report Maintenance")
 
 # Input fields for report submission
 st.subheader("Submit a New Report")
-department = st.text_input("Domain")
-member = st.text_input("Member Name")
-task = st.text_area("Task Description")
+department = st.text_input("Project Name")
+member = st.text_input("Name")
+task = st.text_area("Today's Task Description")
 
 if st.button("Submit Report"):
     if department and member and task:
