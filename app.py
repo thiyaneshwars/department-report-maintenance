@@ -9,14 +9,14 @@ st.title("📑 IITM Daily Report Maintenance")
 
 # Input fields for report submission
 st.subheader("Submit a New Report")
-department = st.text_input("Project Name")
+domain = st.text_input("Project Name")
 member = st.text_input("Name")
 task = st.text_area("Today's Task Description")
 
 if st.button("Submit Report"):
-    if department and member and task:
+    if domain and member and task:
         response = requests.post(f"{API_URL}/add_report", json={
-            "department": department,
+            "domain": domain,
             "member": member,
             "task": task
         })
