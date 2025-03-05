@@ -8,8 +8,7 @@ API_URL = "https://04cc-103-115-236-19.ngrok-free.app"
 # Streamlit UI
 st.title("📑IITM Project Report Maintenance")
 
-# Input fields for report submission
-st.subheader("Submit a New Report")
+
 
 # Department selection with dropdown
 departments = ["HUMAN FACE RECOGNITION AND MOVEMENT RECOGNITION","TELUGU DATA AUGMENTATION","BERT FINETUNING","ENGLISH AUGMENTATION","T5 FINETUNING","ASR TELUGU"]  # Example departments
