@@ -3,7 +3,7 @@ import requests
 
 # Flask API URL (Change if deployed)
 
-API_URL = "https://31a0-103-115-236-19.ngrok-free.app"
+API_URL = "  https://5bf0-103-115-236-19.ngrok-free.app"
 
 # Streamlit UI
 st.title("📑IITM Project Report Maintenance")
