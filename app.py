@@ -1,6 +1,5 @@
 import streamlit as st
 
-
 # Streamlit UI
 st.title("📑 Phonics Kit Project Report Maintenance")
 
@@ -17,64 +16,74 @@ selected_department = st.selectbox("Project Task", departments)
 
 # Task description display based on department
 tasks = {
-    "Audio Input & Speech Recognition": '''Task: Capture audio input from the microphone and transcribe it into text.
-Recommended Algorithm: Whisper (OpenAI) or DeepSpeech (Mozilla)
-✅ Why? Whisper offers highly accurate transcription, even for noisy environments, and supports multiple languages. DeepSpeech is lightweight and ideal for real-time processing.
+    "Audio Input & Speech Recognition": '''
+    **Task:** Capture audio input from the microphone and transcribe it into text.
 
-Description of Algorithm (Whisper):
+    **Recommended Algorithm:** Whisper (OpenAI) or DeepSpeech (Mozilla)
 
-Uses an encoder-decoder transformer model.
-The encoder maps audio features into a latent space.
-The decoder predicts text tokens by learning audio patterns.
-It uses beam search decoding to improve transcription accuracy.''',
-    
-"Pronunciation Analysis": '''Task: Analyze user pronunciation and identify errors.
+    ✅ **Why?** Whisper offers highly accurate transcription, even for noisy environments, and supports multiple languages. DeepSpeech is lightweight and ideal for real-time processing.
 
-Recommended Algorithm: Dynamic Time Warping (DTW) or Phoneme Recognition (CMUdict + Phonemizer)
-✅ Why? DTW effectively compares audio sequences by aligning time-series data, while CMUdict provides precise phoneme mapping.
+    **Description of Algorithm (Whisper):**
+    - Uses an encoder-decoder transformer model.
+    - The encoder maps audio features into a latent space.
+    - The decoder predicts text tokens by learning audio patterns.
+    - It uses beam search decoding to improve transcription accuracy.
+    ''',
 
-Description of Algorithm (DTW):
+    "Pronunciation Analysis": '''
+    **Task:** Analyze user pronunciation and identify errors.
 
-Extracts MFCC (Mel-frequency cepstral coefficients) features from both reference and user speech.
-Measures the cumulative distance between corresponding audio frames.
-Identifies timing errors, phoneme mismatches, and speech rhythm issues.
-Offers flexibility for varying speech speeds and patterns.''',
-    
-"Conversational Response System": '''Task: Provide real-time conversational responses similar to Google Assistant or Alexa.
+    **Recommended Algorithm:** Dynamic Time Warping (DTW) or Phoneme Recognition (CMUdict + Phonemizer)
 
-Recommended Algorithm: Rasa NLU or Dialogflow
-✅ Why? Rasa NLU offers flexible customization, strong intent recognition, and context-aware responses.
+    ✅ **Why?** DTW effectively compares audio sequences by aligning time-series data, while CMUdict provides precise phoneme mapping.
 
-Description of Algorithm (Rasa NLU):
+    **Description of Algorithm (DTW):**
+    - Extracts MFCC (Mel-frequency cepstral coefficients) features from both reference and user speech.
+    - Measures the cumulative distance between corresponding audio frames.
+    - Identifies timing errors, phoneme mismatches, and speech rhythm issues.
+    - Offers flexibility for varying speech speeds and patterns.
+    ''',
 
-Uses intent classification to identify the user's request.
-Utilizes entity extraction to identify key terms like names, numbers, or locations.
-Implements transformer-based embeddings for improved conversational flow.
-Ensures seamless back-and-forth dialogue with dynamic response generation.
-''',
-    
-"Audio Recording & Cloud Storage": '''Task: Record audio feedback and securely store it in the cloud.
+    "Conversational Response System": '''
+    **Task:** Provide real-time conversational responses similar to Google Assistant or Alexa.
 
-Recommended Tools: FFmpeg (Recording) + AWS S3/Firebase (Cloud Storage)
-✅ Why? FFmpeg efficiently handles noise reduction and format conversion, while AWS S3/Firebase ensures secure data storage.
+    **Recommended Algorithm:** Rasa NLU or Dialogflow
 
-Description of Process:
+    ✅ **Why?** Rasa NLU offers flexible customization, strong intent recognition, and context-aware responses.
 
-Captures audio in high-quality formats like .wav or .mp3.
-Applies denoising filters for cleaner audio storage.
-Ensures encrypted cloud uploads for secure data access.''',
-    
-"Web Portal for Feedback Access": '''Task: Provide teachers, doctors, and parents access to pronunciation feedback via a web interface.
+    **Description of Algorithm (Rasa NLU):**
+    - Uses intent classification to identify the user's request.
+    - Utilizes entity extraction to identify key terms like names, numbers, or locations.
+    - Implements transformer-based embeddings for improved conversational flow.
+    - Ensures seamless back-and-forth dialogue with dynamic response generation.
+    ''',
 
-Recommended Frameworks: Flask/Django (Backend) + React.js/Next.js (Frontend)
-✅ Why? Flask/Django ensures fast API development, while React.js/Next.js offers a smooth and interactive user experience.
+    "Audio Recording & Cloud Storage": '''
+    **Task:** Record audio feedback and securely store it in the cloud.
 
-Description of Process:
+    **Recommended Tools:** FFmpeg (Recording) + AWS S3/Firebase (Cloud Storage)
 
-Provides a secure login portal for authorized users.
-Displays recorded audio files, pronunciation scores, and improvement tips.
-Uses REST APIs to connect the database, cloud storage, and user interface seamlessly.'''
+    ✅ **Why?** FFmpeg efficiently handles noise reduction and format conversion, while AWS S3/Firebase ensures secure data storage.
+
+    **Description of Process:**
+    - Captures audio in high-quality formats like .wav or .mp3.
+    - Applies denoising filters for cleaner audio storage.
+    - Ensures encrypted cloud uploads for secure data access.
+    ''',
+
+    "Web Portal for Feedback Access": '''
+    **Task:** Provide teachers, doctors, and parents access to pronunciation feedback via a web interface.
+
+    **Recommended Frameworks:** Flask/Django (Backend) + React.js/Next.js (Frontend)
+
+    ✅ **Why?** Flask/Django ensures fast API development, while React.js/Next.js offers a smooth and interactive user experience.
+
+    **Description of Process:**
+    - Provides a secure login portal for authorized users.
+    - Displays recorded audio files, pronunciation scores, and improvement tips.
+    - Uses REST APIs to connect the database, cloud storage, and user interface seamlessly.
+    '''
 }
 
-selected_task = st.text_area("Task Description", tasks.get(selected_department, ""))
-
+# Enlarged text area for better visibility
+selected_task = st.text_area("Task Description", tasks.get(selected_department, ""), height=300)
