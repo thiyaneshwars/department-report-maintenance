@@ -16,7 +16,7 @@ departments = [
     "Web Portal for Feedback Access"
 ]  # Updated department names
 
-selected_department = st.selectbox("Project Domain", departments)
+selected_department = st.selectbox("Project Task", departments)
 
 # Task description display based on department
 tasks = {
@@ -28,14 +28,4 @@ tasks = {
 }
 
 selected_task = st.text_area("Task Description", tasks.get(selected_department, ""))
-
-if st.button("Submit Report"):
-    if selected_department and selected_task:
-        response = requests.post(f"{API_URL}/add_report", json={
-            "department": selected_department,
-            "task": selected_task
-        })
-        st.success(response.json().get("message"))
-    else:
-        st.warning("Please fill all fields!")
 
