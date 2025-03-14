@@ -11,9 +11,9 @@ departments = [
     "Audio Recording & Cloud Storage",
     "Web Portal for Feedback Access"
 ]  # Updated department names
-
-selected_department = st.selectbox("Select a Department", departments)
 st.markdown("**Project Task**", unsafe_allow_html=True)
+selected_department = st.selectbox( departments)
+
 
 
 # Task description display based on department
