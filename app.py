@@ -12,7 +12,7 @@ departments = [
     "Web Portal for Feedback Access"
 ]  # Updated department names
 
-selected_department = st.selectbox("Project Task", departments,unsafe_allow_html=True)
+selected_department = st.selectbox("Project Task", departments)
 
 # Task description display based on department
 tasks = {
