@@ -12,7 +12,7 @@ departments = [
     "Web Portal for Feedback Access"
 ]  # Updated department names
 st.markdown("**Project Task**", unsafe_allow_html=True)
-selected_department = st.selectbox( " ",departments)
+selected_department = st.selectbox( "",departments)
 
 
 
