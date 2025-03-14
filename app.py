@@ -90,4 +90,4 @@ st.markdown(tasks.get(selected_department, ""), unsafe_allow_html=True)
 
 
 # Enlarged text area for better visibility
-selected_task = st.text_area("Task Description", tasks.get(selected_department, ""), height=500)
+#selected_task = st.text_area("Task Description", tasks.get(selected_department, ""), height=500)
