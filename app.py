@@ -21,7 +21,7 @@ tasks = {
 
     **Recommended Algorithm:** Whisper (OpenAI) or DeepSpeech (Mozilla)
 
-    ✅ **Why?** Whisper offers highly accurate transcription, even for noisy environments, and supports multiple languages. DeepSpeech is lightweight and ideal for real-time processing.
+    **Why?** Whisper offers highly accurate transcription, even for noisy environments, and supports multiple languages. DeepSpeech is lightweight and ideal for real-time processing.
 
     **Description of Algorithm (Whisper):**
     - Uses an encoder-decoder transformer model.
@@ -35,7 +35,7 @@ tasks = {
 
     **Recommended Algorithm:** Dynamic Time Warping (DTW) or Phoneme Recognition (CMUdict + Phonemizer)
 
-    ✅ **Why?** DTW effectively compares audio sequences by aligning time-series data, while CMUdict provides precise phoneme mapping.
+    **Why?** DTW effectively compares audio sequences by aligning time-series data, while CMUdict provides precise phoneme mapping.
 
     **Description of Algorithm (DTW):**
     - Extracts MFCC (Mel-frequency cepstral coefficients) features from both reference and user speech.
@@ -49,7 +49,7 @@ tasks = {
 
     **Recommended Algorithm:** Rasa NLU or Dialogflow
 
-    ✅ **Why?** Rasa NLU offers flexible customization, strong intent recognition, and context-aware responses.
+    **Why?** Rasa NLU offers flexible customization, strong intent recognition, and context-aware responses.
 
     **Description of Algorithm (Rasa NLU):**
     - Uses intent classification to identify the user's request.
@@ -63,7 +63,7 @@ tasks = {
 
     **Recommended Tools:** FFmpeg (Recording) + AWS S3/Firebase (Cloud Storage)
 
-    ✅ **Why?** FFmpeg efficiently handles noise reduction and format conversion, while AWS S3/Firebase ensures secure data storage.
+    **Why?** FFmpeg efficiently handles noise reduction and format conversion, while AWS S3/Firebase ensures secure data storage.
 
     **Description of Process:**
     - Captures audio in high-quality formats like .wav or .mp3.
@@ -76,7 +76,7 @@ tasks = {
 
     **Recommended Frameworks:** Flask/Django (Backend) + React.js/Next.js (Frontend)
 
-    ✅ **Why?** Flask/Django ensures fast API development, while React.js/Next.js offers a smooth and interactive user experience.
+    **Why?** Flask/Django ensures fast API development, while React.js/Next.js offers a smooth and interactive user experience.
 
     **Description of Process:**
     - Provides a secure login portal for authorized users.
