@@ -84,6 +84,7 @@ tasks = {
     - Uses REST APIs to connect the database, cloud storage, and user interface seamlessly.
     '''
 }
+st.markdown(tasks.get(selected_department, ""), unsafe_allow_html=True)
 
 # Enlarged text area for better visibility
-selected_task = st.text_area("Task Description", tasks.get(selected_department, ""), height=300)
+#selected_task = st.text_area("Task Description", tasks.get(selected_department, ""), height=300)
