@@ -72,7 +72,7 @@ tasks = {
     ''',
 
     "Web Portal for Feedback Access": '''
-    Task: Provide teachers, doctors, and parents access to pronunciation feedback via a web interface.
+    **Task**: Provide teachers, doctors, and parents access to pronunciation feedback via a web interface.
 
     Recommended Frameworks: Flask/Django (Backend) + React.js/Next.js (Frontend)
 
@@ -84,7 +84,7 @@ tasks = {
     - Uses REST APIs to connect the database, cloud storage, and user interface seamlessly.
     '''
 }
-st.markdown("**Task:** Capture audio input from the microphone and transcribe it into text.", unsafe_allow_html=True)
+#st.markdown("**Task:** Capture audio input from the microphone and transcribe it into text.", unsafe_allow_html=True)
 st.markdown(tasks.get(selected_department, ""), unsafe_allow_html=True)
 
 
