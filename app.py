@@ -12,7 +12,7 @@ departments = [
     "Web Portal for Feedback Access"
 ]  # Updated department names
 
-selected_department = st.selectbox("**Project Task**", departments, format_func=lambda ")
+selected_department = st.selectbox("**Project Task**", departments")
 
 
 
