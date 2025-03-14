@@ -5,7 +5,7 @@ import requests
 API_URL = "https://ada5-103-115-236-19.ngrok-free.app"
 
 # Streamlit UI
-st.title("📑 T2T Project Report Maintenance")
+st.title("📑 Phonics Kit Project Report Maintenance")
 
 # Department selection with dropdown
 departments = [
@@ -27,16 +27,13 @@ members = {
     "Web Portal for Feedback Access": ["Module 5: Web Portal for Feedback Access - Provide a secure web interface for feedback access."]
 }
 
-selected_member = st.selectbox("Member Name", members.get(selected_department, []))
-
-task = st.text_area("Task Description")
+selected_member = st.selectbox("Member Name", members.get(selected_department, []), key='member_box')
 
 if st.button("Submit Report"):
-    if selected_department and selected_member and task:
+    if selected_department and selected_member:
         response = requests.post(f"{API_URL}/add_report", json={
             "department": selected_department,
-            "member": selected_member,
-            "task": task
+            "member": selected_member
         })
         st.success(response.json().get("message"))
     else:
