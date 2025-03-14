@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Streamlit UI
-st.title("📑 Phonics Kit Project Report Maintenance")
+st.title("📑 Project T2T")
 
 # Department selection with dropdown
 departments = [
@@ -12,7 +12,7 @@ departments = [
     "Web Portal for Feedback Access"
 ]  # Updated department names
 
-selected_department = st.selectbox("Project Task", departments)
+selected_department = st.selectbox("Project Task", departments,unsafe_allow_html=True)
 
 # Task description display based on department
 tasks = {
