@@ -17,13 +17,13 @@ selected_department = st.selectbox("Project Task", departments)
 # Task description display based on department
 tasks = {
     "Audio Input & Speech Recognition": '''
-    **Task:** Capture audio input from the microphone and transcribe it into text.
+    Task: Capture audio input from the microphone and transcribe it into text.
 
-    **Recommended Algorithm:** Whisper (OpenAI) or DeepSpeech (Mozilla)
+    Recommended Algorithm: Whisper (OpenAI) or DeepSpeech (Mozilla)
 
-    ✅ **Why?** Whisper offers highly accurate transcription, even for noisy environments, and supports multiple languages. DeepSpeech is lightweight and ideal for real-time processing.
+    Why? Whisper offers highly accurate transcription, even for noisy environments, and supports multiple languages. DeepSpeech is lightweight and ideal for real-time processing.
 
-    **Description of Algorithm (Whisper):**
+    Description of Algorithm (Whisper):
     - Uses an encoder-decoder transformer model.
     - The encoder maps audio features into a latent space.
     - The decoder predicts text tokens by learning audio patterns.
@@ -31,13 +31,13 @@ tasks = {
     ''',
 
     "Pronunciation Analysis": '''
-    **Task:** Analyze user pronunciation and identify errors.
+    Task: Analyze user pronunciation and identify errors.
 
-    **Recommended Algorithm:** Dynamic Time Warping (DTW) or Phoneme Recognition (CMUdict + Phonemizer)
+    Recommended Algorithm: Dynamic Time Warping (DTW) or Phoneme Recognition (CMUdict + Phonemizer)
 
-    ✅ **Why?** DTW effectively compares audio sequences by aligning time-series data, while CMUdict provides precise phoneme mapping.
+    Why? DTW effectively compares audio sequences by aligning time-series data, while CMUdict provides precise phoneme mapping.
 
-    **Description of Algorithm (DTW):**
+    Description of Algorithm (DTW):
     - Extracts MFCC (Mel-frequency cepstral coefficients) features from both reference and user speech.
     - Measures the cumulative distance between corresponding audio frames.
     - Identifies timing errors, phoneme mismatches, and speech rhythm issues.
@@ -45,13 +45,13 @@ tasks = {
     ''',
 
     "Conversational Response System": '''
-    **Task:** Provide real-time conversational responses similar to Google Assistant or Alexa.
+    Task: Provide real-time conversational responses similar to Google Assistant or Alexa.
 
-    **Recommended Algorithm:** Rasa NLU or Dialogflow
+    Recommended Algorithm: Rasa NLU or Dialogflow
 
-    ✅ **Why?** Rasa NLU offers flexible customization, strong intent recognition, and context-aware responses.
+    Why? Rasa NLU offers flexible customization, strong intent recognition, and context-aware responses.
 
-    **Description of Algorithm (Rasa NLU):**
+    Description of Algorithm (Rasa NLU):
     - Uses intent classification to identify the user's request.
     - Utilizes entity extraction to identify key terms like names, numbers, or locations.
     - Implements transformer-based embeddings for improved conversational flow.
@@ -59,26 +59,26 @@ tasks = {
     ''',
 
     "Audio Recording & Cloud Storage": '''
-    **Task:** Record audio feedback and securely store it in the cloud.
+    Task: Record audio feedback and securely store it in the cloud.
 
-    **Recommended Tools:** FFmpeg (Recording) + AWS S3/Firebase (Cloud Storage)
+    Recommended Tools: FFmpeg (Recording) + AWS S3/Firebase (Cloud Storage)
 
-    ✅ **Why?** FFmpeg efficiently handles noise reduction and format conversion, while AWS S3/Firebase ensures secure data storage.
+    Why? FFmpeg efficiently handles noise reduction and format conversion, while AWS S3/Firebase ensures secure data storage.
 
-    **Description of Process:**
+    Description of Process:
     - Captures audio in high-quality formats like .wav or .mp3.
     - Applies denoising filters for cleaner audio storage.
     - Ensures encrypted cloud uploads for secure data access.
     ''',
 
     "Web Portal for Feedback Access": '''
-    **Task:** Provide teachers, doctors, and parents access to pronunciation feedback via a web interface.
+    Task: Provide teachers, doctors, and parents access to pronunciation feedback via a web interface.
 
-    **Recommended Frameworks:** Flask/Django (Backend) + React.js/Next.js (Frontend)
+    Recommended Frameworks: Flask/Django (Backend) + React.js/Next.js (Frontend)
 
-    ✅ **Why?** Flask/Django ensures fast API development, while React.js/Next.js offers a smooth and interactive user experience.
+    Why? Flask/Django ensures fast API development, while React.js/Next.js offers a smooth and interactive user experience.
 
-    **Description of Process:**
+    Description of Process:
     - Provides a secure login portal for authorized users.
     - Displays recorded audio files, pronunciation scores, and improvement tips.
     - Uses REST APIs to connect the database, cloud storage, and user interface seamlessly.
@@ -86,4 +86,4 @@ tasks = {
 }
 
 # Enlarged text area for better visibility
-selected_task = st.text_area("Task Description", tasks.get(selected_department, ""), height=300)
+selected_task = st.text_area("Task Description", tasks.get(selected_department, ""), height=500)
